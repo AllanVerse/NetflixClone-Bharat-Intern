@@ -1,0 +1,477 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+@font-face {
+    font-family: NetflixSans Bd;
+    src: url('NetflixSans_W_Bd%20(1).woff2') format('woff2');
+}
+@font-face {
+    font-family: Netflix Blk;
+    src: url('NetflixSans_W_Blk.woff2') format('woff2');
+}
+@font-face {
+    font-family: Netflix Md;
+    src: url('NetflixSans_W_Md.woff2') format('woff2');
+}
+@font-face {
+    font-family: Netflix Rg;
+    src: url('NetflixSans_W_Rg.woff2') format('woff2');
+}
+body{
+    background-color: black;
+    color:white;
+}
+.header{
+    width:100%;
+    height:100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(IN-en-20240107-trifectadaily-perspective_alpha_website_medium.jpg);
+    background-size: cover;
+    background-position: center;
+    padding:1% 2%;
+    position:relative;
+}
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 9px 11%;
+}
+
+
+.logo{
+    width:150px;
+    cursor:pointer;
+}
+nav button{
+    border:none;
+    outline: none;
+    background:#db0001;
+    color:#fff;
+    padding:7px 20px;
+    font-size:15px;
+    border-radius:4px;
+    margin-left:10px;
+    cursor:pointer;
+}
+nav select{
+    border:1px solid rgba(255, 255, 255, 0.542);
+    outline: none;
+    background:transparent;
+    color:#fff;
+    padding:7px 20px;
+    font-size:15px;
+    border-radius:4px;
+    margin-left:10px;
+    cursor:pointer;
+}
+.lang2,.lang1{
+    background-color: transparent;
+    color:black;
+    cursor:pointer;
+    width: 126px;
+    height:32px;
+}
+.content{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    text-align:center;
+    justify-content: center;
+    margin-top:40px;
+    margin-left: 40px;
+}
+.content h1{
+    font-size:60px;
+    line-height:90px;
+    font-weight:600;
+    max-width:90px;
+    display: inline;
+    text-overflow: ellipsis;
+}
+.content h3{
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+.login {
+    background: rgba(255, 255, 255, 0.5); 
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    overflow: hidden;
+}
+
+.login input {
+    flex: 1;
+    border: 0;
+    outline: 0;
+    font-weight: 100;
+    font-size: 20px;
+    margin-left: 20px;
+    color: black;
+    margin-right: 10px;
+    padding-right: 10px;
+    background: transparent;
+    border: none;
+    cursor: text;
+    /* box-shadow: 0 1px 0 rgba(255, 255, 255, 0.8); Add a subtle shadow */
+    transition: background 0.3s ease;
+}
+::placeholder{
+    color:#fff;
+}
+.login button{
+    background:#db0001;
+    border:0;
+    outline:0;
+    color:#fff;
+    font-size: 20px;
+    margin-left: 10px;
+    cursor:pointer;
+    padding:15px 30px;
+}
+.section2{
+    padding:50px 12%;
+    font-size: 22px;
+}
+.cnt{
+    display:flex;
+    width:100%;
+    align-items:center;
+    flex-wrap:wrap;
+    padding:50px 0;
+}
+.feature{
+    flex-basis:50%;
+    margin-bottom:20px;
+}
+.imgcnt{
+    flex-basis:50%;
+    margin-bottom:20px;
+}
+.imgcnt img{
+    display:block;
+    width:90%;
+    margin:auto;
+}
+.section2 h2{
+    font-size:50px;
+    font-weight:600;
+    margin-bottom:20;
+}
+ hr{
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: -20rem;
+    margin-right: -20rem;
+    border-style: inset;
+    border-width: 3px;
+    color:#ffffff96;
+    border-color: #ffffff96;
+}
+div.faq{
+    padding: 70px 30px;
+}
+div.faq h1{
+    font-size: 1.625rem;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+div.questions{
+    max-width:1100px;
+    margin: 0 auto;
+    font-size: 1rem;
+}
+
+div.question{
+    position:relative;
+    background-color: #303030a3;
+    margin-bottom: 10px;
+}
+div.question svg{
+    width: 30px;
+    height: 30px;
+    right:30px;
+    top:20px;
+    position:absolute;
+    transform: rotate(45deg);
+    transition: all 0.2s ease;
+}
+div.question .head{
+    display:block;
+    padding: 20px 30px;
+    border-bottom: 1px solid #000;
+    cursor: pointer;
+}
+div.question div.answer{
+    padding: 0 30px;
+    max-height:0;
+    overflow: hidden;
+    transition: all 0.2s ease;
+}
+div.question input[type="checkbox"]{
+    display: none;
+}
+div.question input[type="checkbox"]:checked ~ div.answer{
+    padding: 30px 30px;
+    max-height:600px;
+}
+div.question input[type="checkbox"]:checked ~ .head svg{
+    transform: rotate(180deg);
+}
+div.faq h3{
+    font-weight: normal;
+    text-align: center;
+    margin: 40px 0 20px;
+}
+div.faq form{
+    max-width:635px;
+    margin: 0 auto;
+}
+div.faq form div + div{
+    text-align: center;
+}
+.question:hover{
+    background-color: #303030;
+}
+small {
+    display: block;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 17px;
+}
+.secondlogin{
+    margin-bottom: 60px;
+}
+.footer{
+    padding: 50px 15% 10px;
+    color:#777;
+}
+.footer h2{
+    font-size: 18px;
+    font-weight:400 ;
+    margin-bottom: 30px;
+}
+.footer .col{
+    flex-basis: 25%;
+    flex-grow: 1;
+    margin-bottom: 20px;
+}
+.footer .col a{
+    display: block;
+    text-decoration: none;
+    color:#777;
+    font-size:14px;
+    margin-bottom: 10px;
+}
+.footer .cnt{
+    align-items: flex-start;
+    padding: 30px 20px;
+}
+select{
+    border:1px solid rgba(255, 255, 255, 0.542);
+    outline: none;
+    background:transparent;
+    color:#fff;
+    padding:7px 20px;
+    font-size:15px;
+    border-radius:4px;
+    margin-left:17px;
+    cursor:pointer;
+}
+.footer h2 a{
+    text-decoration: none;
+    color:#777;
+}
+.footer h2{
+    color:#777;
+    margin-top: 30px;
+    margin-left: 20px;
+}
+.copy{
+    color:#777;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    margin-left: 20px;
+    align-items: flex-start;
+}
+.copy a{
+    text-decoration: none;
+    color:#777;
+}
+/* --------------------Media Query------------------- */
+
+@media only screen and (max-width: 768px) {
+    
+    .header {
+        padding: 5% 2%;
+    }
+
+    .logo {
+        width: 120px;
+    }
+
+    nav {
+        padding: 9px 5%;
+    }
+
+    .started {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 10px;
+    }
+
+    nav button {
+        margin-top: 10px;
+        margin-left: 0;
+    }
+
+    .login input {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .login button {
+        margin-left: 0;
+    }
+
+    .section2 h2 {
+        font-size: 30px;
+    }
+
+    .feature p {
+        font-size: 16px;
+    }
+
+    .faq h1 {
+        font-size: 1.125rem;
+    }
+
+    div.question .head {
+        padding: 15px;
+    }
+
+    div.question div.answer {
+        padding: 0 15px;
+    }
+
+    select {
+        margin-left: 0;
+    }
+
+    .footer {
+        padding: 30px 5% 10px;
+    }
+
+    .footer h2 {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+
+    .footer .col {
+        flex-basis: 50%;
+        margin-bottom: 15px;
+    }
+
+    select {
+        margin-left: 0;
+    }
+
+    .copy {
+        font-size: 12px;
+        margin-top: 10px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+
+    .header {
+        padding: 5% 2%;
+    }
+
+    .logo {
+        width: 120px;
+    }
+
+    nav {
+        padding: 9px 5%;
+    }
+
+    .started {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 10px;
+    }
+
+    nav button {
+        margin-top: 10px;
+        margin-left: 0;
+    }
+
+    .login input {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .login button {
+        margin-left: 0;
+    }
+
+    .section2 h2 {
+        font-size: 30px;
+    }
+
+    .feature p {
+        font-size: 16px;
+    }
+
+    .faq h1 {
+        font-size: 1.125rem;
+    }
+
+    div.question .head {
+        padding: 15px;
+    }
+
+    div.question div.answer {
+        padding: 0 15px;
+    }
+
+    select {
+        margin-left: 0;
+    }
+
+    .footer {
+        padding: 30px 5% 10px;
+    }
+
+    .footer h2 {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+
+    .footer .col {
+        flex-basis: 50%;
+        margin-bottom: 15px;
+    }
+
+    select {
+        margin-left: 0;
+    }
+
+    .copy {
+        font-size: 12px;
+        margin-top: 10px;
+    }
+}
+
+
